@@ -31,7 +31,7 @@ function setup() {
 	rope4=new rope(bob4.body,roofObject.body, 40, 0)
 	rope5=new rope(bob5.body,roofObject.body, 80, 0)
 	
-	rope1 = new Constraint.create(rope1,bob3);
+	
 	Engine.run(engine);
 	
   
@@ -56,6 +56,10 @@ function draw() {
   bob5.display();
   
  
+}
+function keyPressed(){
+if (keyCode === UP_ARROW){
+	Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-60,y:-55});
 }
 
 
